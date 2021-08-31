@@ -40,3 +40,173 @@ A: git reset (commit hash)
 
 9.  Let’s say I wrote a bad message for a commit. How could I change it?
 A: git commit --amend -m "new message"
+
+Python
+1.  How do I run my code from the terminal?
+A: python (name_of_py_file)
+
+2.  What can I use to reference a value later in my code?
+A: an assignment operator or =.
+E: variable = whatever + stuff
+
+3.  How can I make my program display text or some value in my terminal?
+A: The print function
+E:print("this is a pop quiz")
+
+4.  How can I make my code make decisions on which code to execute?
+A: if statements
+E: if variable = 10
+        print("that's 10")
+    else:
+        print("that's not 10")
+
+
+5.  How can I repeat blocks of code based on conditions?
+A: A while loop
+E: while variable <= 10:
+    print("let's go to 10")
+    variable += 1
+
+6.  Why is it critical to ensure that our conditions eventually become false when repeating blocks of code?
+A: so that you do not create an infinite loop
+E: while variable <=10:
+    print("let's go to 10")
+
+7.  What are sequences and what are the differences between them?
+A: "strings", ["lists"], ("tuples"), range()
+E: A string is a group of characters. A list is is a collection of items that is mutable. A tuple is a colllection of items that is immutable. A range 
+generates numbers between a specified set of numbers. i.e.: for whatever in range(10) printed would count from 0 to 9.
+
+8.  How do I access a value within the various types of sequences?
+A: list: listname[value accessed]       tuple: tuplename[value accessed]
+E: List - fruit = ["apple", "orange"," lime"]
+            print(fruit[0])
+    This example prints apple
+E: Tuple - fruit = ("apple", "orange", "lime")
+            print(fruit[-1])
+    This example would print lime
+9.  What is an index when talking about sequences?
+A: an index is rthe particular placement of a value in a sequence.
+E: fruit = ["apple", "orange", "lime"]. index 0 is apple. index 1 is orange and index 2 is lime. 
+
+
+10. What is the index of the first value within a sequence?
+A: Zero
+
+11. How can I add or remove a value from a sequence?
+A: add a value to a string by concentating 
+E: str1 = "Hello "
+   str2 = "there."
+   print(str1 + str2)
+A: add a value to a list by using the .append method.
+E: fruit = ["apple", "orange", "lime"]
+   fruit.append(lemon)
+   print(fruit)
+   will print: ["apple", "orange", "lime", "lemon"]
+A: Tuple are immutable.
+
+12. What is the index of the last value within a sequence?
+A: -1
+
+13. How can I get the length of a sequence?
+A: you would use the len() function.
+E: fruit = ["apple", "orange", "lime"]
+   length = len(fruit)
+A:The terminal would print 3
+
+14. What can I use to reference and use a block of code later in my code?
+A: you can use a function
+E: def flowers():
+        print("flowers are pretty")
+
+flowers()
+
+15. What is DRY?
+A: Don't Repeat Yourself
+
+16. What is Scope? Provide an example.
+A: Scope means a variable can only be used from inside of wherever it was created.
+E: def flowers():
+        roses = 40
+        print(roses)
+   def plants():
+        plants = 120
+        print(roses)
+
+Roses is out of scope in the second function.
+
+17. What is the difference between parameters and arguments?
+A: a parameter is what is placed inside the parentheses and tells our function what to expect.
+   an argument is what actually gets passed to the function when the function is called.
+
+   def function_name(name, age): name and age are parameters
+        print(name + ", " + age)
+    
+    function_name("Ashley", "Savage")
+
+18. What is recursion?
+A: recursion is when a function calls on itself.
+
+19. How can you return a value from a function?
+A: use a return statement
+E: def muliplication(x, y):
+
+    return x * y
+
+20. Describe a dictionary. How and why would it be useful?
+A: dictionary is a place to store data that has a key and a value. A dictionary allows us to acces information more quickly(almost like a variable)
+E: students = ("Ashley": 31, "Katie": 29, "Merideth": 33)
+
+21. How can you remove a value from a dictionary?
+A: you can use .pop() to remove something from a dictionary
+E:students.pop(1) would remove Katie from the dictionary.
+
+22. How can you access and change values within a dictionary?
+A: to access a value, you must call that value. to change a value, you must call the value and assign it a new value.
+E: strdents["Ashley"] = 32
+
+23. What data types can a sequence hold?
+A: Strings, lists, tuples
+
+24. What data types can a dictionary hold?
+A:integer, float, string, boolean
+
+25. How can you iterate through a dictionary?
+A: by looping the answer
+E: students = ("Ashley": 31, "Katie": 29, "Merideth": 33)
+   for u in students:
+        print(u)
+26. What is object oriented programming?
+using objects to bundle related properties and behaviors. 
+
+27. Describe a class? Why are they useful?
+A: A class is like a blueprint. It allows you to change and manipulate different objects throughout your code without having put them in manually.
+
+E: class house:
+     def __init__(self, type, floors, cabinets,):
+         self.type = type
+         self.floors = floors
+         self.cabinets = cabinets
+
+28. What are class properties? How would I give a class an initial set of properties?
+A: allows you to assign certain values to a variable to create new objects
+E:  class house:
+     def __init__(self, type, floors, cabinets,):
+         self.type = type
+         self.floors = floors
+         self.cabinets = cabinets
+        
+29. What are class methods?
+A:functions that tell what a class can do.
+class Car:
+ def __init__(self, make, model, color, current_speed = 0):
+     self.make = make
+     self.model = model
+     self.color = color
+
+    def add_car(self, make):
+    self.make["make"] = make
+
+30. What is inheritence?
+A: when a subclass takes on the attributes and methods from a class.
+E: class small_car(car)
